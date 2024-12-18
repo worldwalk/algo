@@ -1,4 +1,4 @@
-package dyopro
+package dyoprog
 
 import "gopkg/util"
 
