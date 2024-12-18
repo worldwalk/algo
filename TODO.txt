@@ -1,0 +1,26 @@
+
+
+链表
+1、链表反转 //done
+2、K个一组反转（递归、迭代） //done
+3、逆序K个一组反转  //done
+4、合并N个有序链表（非Priority_Queue解法) //done 归并法
+
+排序
+1、归并排序 //done
+
+树
+1、BFS遍历
+2、生成二叉树
+3、TRIE树
+
+other
+1、 topK、数组中前K小   https://mp.weixin.qq.com/s/M_xtSEtj69f_xmleRXgFqQ  //done
+2、 全排列；迭代法
+
+leetcode
+1、 旋转链表 https://leetcode.cn/problems/rotate-list/solutions/681812/xuan-zhuan-lian-biao-by-leetcode-solutio-woq1/  //done
+2、 旋转数组 https://blog.csdn.net/weixin_45666566/article/details/114213485  //done
+3、 https://leetcode.cn/problems/lru-cache/  LRU
+4、 BFS https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247485134&idx=1&sn=fd345f8a93dc4444bcc65c57bb46fc35&scene=21#wechat_redirect
+5、 二叉堆：优先级队列：https://mp.weixin.qq.com/s?__biz=MzAxODQxMDM0Mw==&mid=2247484495&idx=1&sn=bbfeba9bb5cfd50598e2a4d08c839ee9&scene=21#wechat_redirect
