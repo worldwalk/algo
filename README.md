@@ -1,1 +1,3 @@
 # algo
+
+personal algo practice
