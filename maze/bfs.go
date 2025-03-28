@@ -3,7 +3,7 @@ package maze
 import "fmt"
 
 // can find the shortest path
-// https://blog.csdn.net/xxxzzzqqq_/article/details/130379211
+// https://juejin.cn/post/7225525387102666808
 func bfs(maze [][]int, start, end Point) []Point {
 	/*
 		在这个示例中，我们在BFS算法中添加了一个parents数组，用于记录每个节点的父节点。
