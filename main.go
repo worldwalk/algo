@@ -20,20 +20,29 @@ import (
 // 	} `json:"data"`
 // }
 
-func main() {
-	// 调用方法读取并反序列化文件内容
-	fbs, err := readAndDeserialize("output.json1")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
+func testSlice(path []int) {
+	path = append(path, 6)
+	fmt.Println(path)
+}
 
-	// 打印反序列化后的结果
-	for _, fb := range fbs {
-		fmt.Printf("ID: %s, Name: %s\n", fb.Message, fb.AppId)
-		//fmt.Printf("%+v\n", fb)
-	}
-	fmt.Println(len(fbs))
+func main() {
+
+	path := []int{1, 2, 3, 4, 5}
+	testSlice(path)
+	fmt.Println(path)
+	// // 调用方法读取并反序列化文件内容
+	// fbs, err := readAndDeserialize("output.json1")
+	// if err != nil {
+	// 	fmt.Println("Error:", err)
+	// 	return
+	// }
+
+	// // 打印反序列化后的结果
+	// for _, fb := range fbs {
+	// 	fmt.Printf("ID: %s, Name: %s\n", fb.Message, fb.AppId)
+	// 	//fmt.Printf("%+v\n", fb)
+	// }
+	//fmt.Println(len(fbs))
 	//cache.LRUTest()
 	//maze.MazeDFSTest()
 	//maze.MazeBFSTest()

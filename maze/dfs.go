@@ -28,20 +28,24 @@ func dfs(maze [][]int, cur Point, end Point, visited map[Point]bool, path *[]Poi
 	}
 	visited[cur] = true
 	*path = append(*path, cur)
-	if cur.x > 0 && dfs(maze, Point{cur.x - 1, cur.y}, end, visited, path) {
-		return true
+
+	// 定义四个方向：上、右、下、左
+	directions := []Point{
+		{-1, 0}, {0, 1}, {1, 0}, {0, -1},
 	}
-	if cur.x < len(maze)-1 && dfs(maze, Point{cur.x + 1, cur.y}, end, visited, path) {
-		return true
+
+	for _, dir := range directions {
+		next := Point{cur.x + dir.x, cur.y + dir.y}
+		// 检查边界条件
+		if next.x >= 0 && next.x < len(maze) && next.y >= 0 && next.y < len(maze[0]) {
+			if dfs(maze, next, end, visited, path) {
+				return true
+			}
+		}
 	}
-	if cur.y > 0 && dfs(maze, Point{cur.x, cur.y - 1}, end, visited, path) {
-		return true
-	}
-	if cur.y < len(maze[0])-1 && dfs(maze, Point{cur.x, cur.y + 1}, end, visited, path) {
-		return true
-	}
+
 	*path = (*path)[:len(*path)-1]
-	visited[cur] = false // 仅找一条路径，这行貌似没用
+	visited[cur] = false
 	return false
 }
 
