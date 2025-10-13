@@ -19,7 +19,7 @@ func backtracking(maze [][]int, cur Point, end Point, visited [][]bool, path []P
 		}
 		/*
 			这里visited的设置放在for内，也是正确的，因为是回溯算法，每次都是针对一个树枝（两个节点）！
-			和backtracking2不同！backtracking2是针对一个节点！
+			和backtracking2不同！backtracking2是针对一个节点（在访问节点的位置写的append）！
 		*/
 		visited[next.x][next.y] = true
 		path = append(path, next)
