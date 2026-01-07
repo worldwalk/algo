@@ -28,3 +28,12 @@ func getLen(head *Node) int {
 	}
 	return ret
 }
+
+func isMinLen(head *Node, k int) bool {
+	l := k
+	for l > 0 && head != nil {
+		l--
+		head = head.Next
+	}
+	return l == 0
+}
