@@ -117,6 +117,7 @@ func (h *NodeHeap) Push(x interface{}) {
 	*h = append(*h, x.(*Node))
 }
 func (h *NodeHeap) Pop() interface{} {
+	//old 变量虽然不是必须的，但它提高了代码的可读性和安全性。在实际开发中，可读性和可维护性通常比代码简洁性更重要。
 	old := *h
 	n := len(old)
 	x := old[n-1]
