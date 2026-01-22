@@ -1,4 +1,4 @@
-package lcs
+package dyoprog
 
 import (
 	"testing"

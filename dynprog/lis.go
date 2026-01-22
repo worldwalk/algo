@@ -1,4 +1,4 @@
-package lis
+package dyoprog
 
 import "fmt"
 
@@ -86,13 +86,13 @@ func printLISPath(arr []int) {
 	// 找到所有以最长长度结尾的位置，从这些位置开始回溯
 	for i := 0; i < dim; i++ {
 		if maxL == dp[i] {
-			dfs(matrix, arr, i, path, 0) // 从位置 i 开始深度优先搜索回溯路径
+			dfs_matrix(matrix, arr, i, path, 0) // 从位置 i 开始深度优先搜索回溯路径
 		}
 	}
 
 }
 
-// dfs 深度优先搜索回溯路径，打印所有可能的最长递增子序列
+// dfs_matrix 深度优先搜索回溯路径，打印所有可能的最长递增子序列
 //
 // 参数说明：
 //   - matrix: 路径矩阵，matrix[i] 存储位置 i 的所有前驱位置
@@ -118,13 +118,13 @@ func printLISPath(arr []int) {
 //	- matrix[3] = [1, -2]，前驱是位置 1（值为 5）
 //	- 从位置 1 继续回溯，matrix[1] = [0, -2]，前驱是位置 0（值为 2）
 //	- 从位置 0 继续回溯，matrix[0] = [-1, -2]，遇到 -1，打印路径 [2,5,7]
-func dfs(matrix [][]int, arr []int, s int, path []int, idx int) {
+func dfs_matrix(matrix [][]int, arr []int, s int, path []int, idx int) {
 	if s >= 0 {
 		// 将当前位置的元素加入路径
 		path[idx] = arr[s]
 		// 遍历所有前驱位置，继续回溯
 		for i := 0; matrix[s][i] != -2; i++ {
-			dfs(matrix, arr, matrix[s][i], path, idx+1)
+			dfs_matrix(matrix, arr, matrix[s][i], path, idx+1)
 		}
 	} else {
 		// s < 0 表示遇到 -1 标记，到达起点，打印完整路径
